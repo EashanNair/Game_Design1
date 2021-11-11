@@ -20,7 +20,7 @@ function preload(){
   bg2Image = loadImage("Bg2.jpg")
   playerAnimation = loadAnimation("player.png","Player1.png", "player2.png")
   coinImage =loadAnimation("coin1.png","coin2.png","coin3.png","coin4.png","coin5.png","coin6.png")
-  bombImg = loadImage("Bomb.png")
+  bombImg = loadImage("bomb.png")
   orangeImage = loadImage("orange.png")
   bananaImage = loadImage("banana.png")
   appleImage = loadImage("apple.png")
@@ -108,19 +108,17 @@ reducer()
    randomSelector = Math.round(random(1,4))
   }else{
     background("black");
-    // button = createButton("restart")
+     button = createButton("Restart")
     textSize(35)
     fill("white")
     // text("Fruits:"+fruits, player.x-300,player.y -200)
-    text("Score:"+score, camera.x-100, camera.y-100)
-    text("RELOAD  to restart", camera.x-100, camera.y-200)
-    // button.position(100,100);
-    // button.style("fontStyle","30px")
-    // button.mousePressed(()=>{
-    //   button.hide()
-    //   gameState="play"
+    text("Your Score is "+score, camera.x-130, camera.y-100)
+     button.position(300,400);
+    button.style("font-size","40px")
+    button.mousePressed(()=>{
+    window.location.reload();
       
-    // })
+    })
   }
 }
 
